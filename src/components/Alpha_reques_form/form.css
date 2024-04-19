@@ -1,0 +1,157 @@
+html {
+  --form-bg-color: rgba(255, 255, 255, 1);
+  --form-input-color: rgba(0, 0, 0, 1);
+  --apna-color: rgba(0, 161, 241);
+  }
+
+.registration-section {
+  position: fixed;
+  z-index: -1;
+  background-color: var(--apna-color);
+  min-width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: calc(4%) calc(40px + 4%) calc(4%) calc(40px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  background-color: var(--form-bg-color);
+}
+
+.form-label {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: baseline;
+  width: 100%;
+  border-radius: 4px;
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.placeholder-text {
+  font-size: 28px;
+  font-weight: 400;
+  text-align: right;
+  width: 25%;
+  color: var(--apna-color);
+}
+
+.form-input {
+  width: 80%;
+  border-width: 0px 0px 2px 0px;
+  padding-left: 5px;
+  margin-left: 20px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--apna-color);
+  font-size: 28px;
+  color: var(--apna-color);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: rgba(0, 161, 241, 0.4); /* Replace with the color you want */
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--apna-color);
+  color: white;
+  padding: 15px 20px;
+  margin-top: 20px;
+  margin-left: 4%;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form-button:hover {
+  background-color: navy;
+}
+
+.form-button-otp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--apna-color);
+  color: white;
+  padding: 15px 20px;
+  margin-top: 20px;
+  margin-left: 4%;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form-button-otp:hover {
+  background-color: navy;
+}
+
+@media (max-width: 576px) {
+  .form-container {
+    width: 60%;
+    justify-content: center;
+    padding: 8%;
+  }
+  
+  .form-label {
+    flex-direction: column;
+    align-items: baseline;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .placeholder-text {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: left;
+    width: auto;
+    color: var(--apna-color);
+  }
+  
+  .form-input {
+    width: 100%;
+    border-width: 0px 0px 2px 0px;
+    padding-left: 5px;
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .form-button {
+    padding: 15px 20px;
+    margin-top: 20px;
+    margin-left: 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .form-button-otp {
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left: 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+}

@@ -1,13 +1,221 @@
 body {
+  overflow: auto;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Anton', 'Ubuntu', 'Segoe UI',  'Oxygen',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hidescroll {
+  overflow: hidden!important;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(62, 62, 62);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Navbar */
+.navbar {
+  z-index: 999;
+  position: fixed !important;
+  transition: all 0.3s ease-out 0s !important;
+  width: 100vw;
+  background-color: #00a1f1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.sticky-navbar {
+  z-index: 999;
+  transition: all 0.3s ease-out 0s !important;
+  width: 100vw;
+  background-color: #00a1f1;
+  /* border-bottom: 1px #fff solid; */
+}
+
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 4%;
+  margin-right: 4%;
+  height: 100px;
+}
+
+.logo-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  max-height: 100px;
+}
+.nav-logo-img {
+  max-height: 80px;
+  margin-right: 10px;
+}
+.navbar-company-name {
+  font-size: 24px;
+  color: #fff;
+}
+
+.navbar-texts  {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-text-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 25px;
+  margin-left: 4vw;
+  padding: 10px 10px;
+  background-color: #00a1f160;
+  border-radius: 50px;
+}
+.navbar-text{
+  display: flex;
+  color: #fff;
+  font-size: 24px;
+}
+
+@media (max-width: 577px) {
+  .navbar {
+    background-color: #00a1f196;
+    box-shadow: 0 0 10px rgba(0, 161, 241, 0);
+    backdrop-filter: blur(5px);
+  }
+  .navbar-container {
+    justify-content: space-around;
+    height: 80px;
+  }
+  .nav-text-button {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding: 10px 0px;
+    background-color: #00a1f100;
+  }
+  .navbar-text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 5px;
+  }
+  .navbar-text:hover{
+    border-bottom: #ffffff solid 2px;
+  }
+  .logo-part,
+  .nav-contact
+  {
+    display: none;
+  }
+}
+
+/* Footer  */
+.footer-container {
+  display: flex;
+  flex: 1;
+  background-color: #00a1f1;
+  flex-direction: "row";
+  align-items: flex-end;
+  justify-content: space-between;
+  color: #fff;
+  padding-left: 160px;
+  padding-right: 160px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.footer-contact {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.footer-company-name {
+  transition: all 0.2s;
+  margin-bottom: 0;
+  margin-top: 0;
+  align-items: center;
+  align-content: center;
+  color: rgb(243, 243, 243);
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 32px;
+}
+.footer-text {
+  font-size: 22px;
+}
+
+.footer-address {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.footer-title {
+  margin-bottom: 0;
+  margin-top: 0;
+  align-items: center;
+  align-content: center;
+  font-size: 28px;
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #fff;
+    padding: 20px 50px;
+  }
+  .footer-contact {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .footer-text {
+    margin-bottom: 0;
+  }
+  .footer-company-name {
+    transition: all 0.2s;
+    margin-bottom: 0;
+    margin-top: 0;
+    align-items: center;
+    align-content: center;
+    color: rgb(243, 243, 243);
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 28px;
+    border-bottom: white 1px solid;
+    margin-bottom: 10px;
+  }
+  .footer-address {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .footer-title {
+    font-size: 0px;
+  }
+}
+
+

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5fe7d79f.css",
+    "main.js": "/static/js/main.3f344fec.js",
+    "static/media/emptyPhoneScreen.png": "/static/media/emptyPhoneScreen.50ea61d4471774155bb9.png",
+    "index.html": "/index.html",
+    "main.5fe7d79f.css.map": "/static/css/main.5fe7d79f.css.map",
+    "main.3f344fec.js.map": "/static/js/main.3f344fec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fe7d79f.css",
+    "static/js/main.3f344fec.js"
+  ]
+}
